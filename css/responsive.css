@@ -180,6 +180,7 @@
       flex-direction: column;
       height: 771px;
       margin-top: 30px;
+      padding: 0 10px;
       width: 100%;
       position: relative;
       justify-content: unset;
@@ -303,6 +304,10 @@
       width: 100%;
       height: 890px;
     }
+
+    .section__organization-body {
+      padding: 0 10px;
+    }
   
     .section__organization-title {
       margin-left: 10px;
@@ -420,7 +425,7 @@
   
     .section__service-body {
       width: 100%;
-      padding: 0 10px;
+      padding-left:20px;
       height: 100%;
       background-color: #f1f3f4;
       overflow-x: hidden;
@@ -516,6 +521,7 @@
       width: 100%;
       height: 550px;
       margin-top: 50px;
+      padding-left: 10px;
     }
     
     .section__news-title {

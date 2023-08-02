@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/responsive.css">
   <link rel="stylesheet" href=".//css/reset.css">
   <link href="./bootstrap-5.0.2/css/bootstrap.css" rel="stylesheet">
   <link href="./aos-master/aos-master/dist/aos.css" rel="stylesheet">
@@ -16,53 +17,57 @@
 
 <body>
   <header>
-    <div class="header">
+    <div class="header" id="header">
       <div class="header__body">
-        <div class="header__logo">
-          <img srcset="./images/logo-white.png 2x" alt="">
+        <div class="header__logo" >
+          <img srcset="./images/logo-white.png 2x" alt="" id="reload">
           <span class="header__phone">+00 9875466</span>
-          <div class="header__nav-mobile"><i class="fas fa-bars"></i></div>
+          <div class="header__nav-mobile-menu" id="btn-nav-mobile"><i class="fas fa-bars"></i></div>
         </div>
-        <nav class="header__navbar">
+        <nav class="header__navbar" id="nav-menu">
           <ul class="header__menu">
             <li class="menu-item">
-              <a href="#" class="header__menu-link">Home</a>
+              <a href="#home" class="header__menu-link">Home</a>
             </li>
             <li class="menu-item">
-              <a href="#" class="header__menu-link">About us <i class="fas fa-chevron-down"></i></a>
+              <a href="#about us" class="header__menu-link">About us <i class="fas fa-chevron-down"></i></a>
             </li>
             <li class="menu-item">
-              <a href="#" class="header__menu-link">Project</a>
+              <a href="#project" class="header__menu-link">Project</a>
             </li>
             <li class="menu-item">
-              <a href="#" class="header__menu-link">Service </a>
+              <a href="#service" class="header__menu-link">Service </a>
             </li>
             <li class="menu-item">
-              <a href="#" class="header__menu-link">New & Event</a>
+              <a href="#new" class="header__menu-link">New & Event</a>
             </li>
             <li class="menu-item">
-              <a href="#" class="header__menu-link">Careers</a>
+              <a href="#careers" class="header__menu-link">Careers</a>
             </li>
             <li class="menu-item">
-              <a href="#" class="header__menu-link">Contact</a>
+              <a href="#contact" class="header__menu-link">Contact</a>
             </li>
+            <div class="menu-mobile-contact">
+              <p>Email: info@gmail.com.vn</p>
+              <label>Security Hotline: (+84) 254 3526981 </label>
+            </div>
           </ul>
         </nav>
-        <div class="header__title" data-aos="fade-up" data-aos-duration="3000">
-          <span>
-            Building For<br /><a style="color: #4CA757;">Green</a> Energy
-          </span>
+        <div>
+          <div class="header__title" data-aos="fade-up" data-aos-duration="3000">
+            <span>
+              Building For<br /><a style="color: #4CA757;">Green</a> Energy
+            </span>
+          </div>
+          <div class="header__title-description" data-aos="fade-left" data-aos-duration="3000">We provide types of
+            services for Wind Farm projects in Vietnam. With
+            <a style="font-weight: 700;">153+ MW of Wind</a> turbines installed since established, we are confident to
+            provide the best services to our
+            customer.
+          </div>
         </div>
-        <div class="header__title-description" data-aos="fade-left" data-aos-duration="3000">We provide types of
-          services for Wind Farm projects in Vietnam. With
-          <a style="font-weight: 700;">153+ MW of Wind</a> turbines installed since established, we are confident to
-          provide the best services to our
-          customer.
-        </div>
-
       </div>
-
-      <div>
+      <div class="slide-switch-btn">
         <div class="header__slide-show-experience active">
           <div class="show-experience-content">
             <span>15<p>Experience</p></span>
@@ -74,7 +79,7 @@
     </div>
   </header>
   <main>
-    <section class="section__about">
+    <section class="section__about" id="about us">
       <div class="section__about-body">
         <div class="about-body-title">
           <h5>About us</h5>
@@ -109,7 +114,7 @@
     <section class="section__marquee">
       <div>OFFSHORE ENERGY INSTALLATION</div>
     </section>
-    <section class="section__organization">
+    <section class="section__organization" id="project">
       <div class="section__organization-body">
         <div class="section__organization-title">
           <h5>WE ARE</h5>
@@ -161,7 +166,7 @@
       </div>
       </div>
     </section>
-    <section class="section__service">
+    <section class="section__service" id="service">
       <div class="section__service-body">
         <div class="section__service-content">
           <h5>Our Comprehensive Service</h5>
@@ -222,7 +227,7 @@
         </div>
       </div>
     </section>
-    <section class="section__news">
+    <section class="section__news" id="new">
       <div class="section__news-title">
         <span class="title-content">
           <p>NEWS</p>
@@ -278,7 +283,7 @@
       </div>
     </section>
     <footer>
-      <div class="footer">
+      <div class="footer" >
         <div class="footer__logo">
           <img srcset="./images/logo-white.png 2x" alt="">
           <p class="footer__logo-title">Offshore Energy Installation JSC</p>
@@ -301,7 +306,7 @@
             <li>PRIVACY POLICY</li>
           </ul>
         </div>
-        <div class="footer__email">
+        <div class="footer__email" id="contact">
           <h5 class="email-title">Sign up for email to receive the latest information</h5>
           <p>Lorem ipsum dolor sit amet consectetur. Aliquam sed blandit rhoncus id dictum. </p>
           <input class="custom-input" type="text" placeholder="Your email" />
@@ -323,11 +328,45 @@
         </div>
       </div>
     </footer>
+
   </main>
 </body>
 <script>
-  AOS.init({
+  AOS.init();
+  var navMobile = document.getElementById('nav-menu');
+  var btnNavMobile = document.getElementById('btn-nav-mobile');
+  btnNavMobile.onclick = function () {
+    if (navMobile.style.display === "none") {
+      navMobile.style.display = "block";
+    } else {
+      navMobile.style.display = "none";
+    }
+  }
+
+  let prevScrollPos = window.pageYOffset;
+  window.addEventListener("scroll", () => {
+    let prevScrollPos = 400;
+    const currentScrollPos = window.pageYOffset;
+    if (currentScrollPos > prevScrollPos) {
+      navMobile.style.display = "none";
+    }
+  })
+
+  var menuItems = document.querySelectorAll('.menu-item')
+  for (var i = 0; i < menuItems.length; i++) {
+    var menuItem = menuItems[i];
+    menuItem.onclick = function() {
+      navMobile.style.display = "none";
+    }
+  }
+
+
+  const reload = document.getElementById("reload");
+
+  reload.addEventListener("click", (event) => {
+    location.reload();
   });
+  
 </script>
 
 </html>

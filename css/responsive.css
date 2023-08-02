@@ -387,8 +387,13 @@
       margin-top: 40px;
       padding: 0 10px;
       flex-wrap: wrap;
+      
     }
-  
+    
+    .number {
+      color: white;
+    }
+
     .section__organization-number p {
       font-size: 80px;
       line-height: 95px;
